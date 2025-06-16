@@ -1,0 +1,30 @@
+name: env_isaaclab
+channels:
+  - nvidia
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - cudatoolkit=11.8  # 适配 RTX 3060 CUDA 兼容性
+  - pytorch=2.1
+  - torchvision
+  - numpy
+  - matplotlib
+  - pandas
+  - scipy
+  - tqdm
+  - h5py
+  - gym
+  - pip:  # - omniisaacgymenvs 若为 pip 安装的 Isaac Sim 组件
+      - hydra-core
+      - omegaconf
+      - pyquaternion
+      - pybullet
+      - scikit-image
+      - transforms3d
+      - wandb
+      - pybind11
+      - open3d==0.17.0
+      - urdfpy
